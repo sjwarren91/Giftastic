@@ -1,0 +1,65 @@
+var topics = [
+    "Red Panda",
+    "German Shepherd",
+    "Ferret",
+    "Macaw",
+    "Otter",
+    "Meerkat",
+    "Wolf",
+    "Eagle",
+    "Dolphin",
+    "Octopus"
+];
+
+var queryURL = "http://api.giphy.com/v1/gifs/search?api_key=cowOAeiGWvGdEO89h5WnD0cWel5LBdO2&limit=10"
+
+topics.forEach(function(value) {
+    var button = $("<button>");
+    button.attr("type", "button");
+    button.addClass("btn btn-primary m-1");
+    button.text(value);
+    $(".button-container").append(button);
+});
+
+function getGifs(){
+    var search = $(this).text();
+    var URL = queryURL + "&q=" + search;
+    console.log(URL);
+    $.ajax({
+        url: URL,
+        method: "GET"
+    }).then(function(response){
+        console.log(response);
+        var items = response.data;
+        console.log(items);
+        items.forEach(function(value){
+            var image = $("<img class='gif' src='" + value.images.fixed_height_still.url + "'>");
+            image.attr("data-still", value.images.fixed_height_still.url);
+            image.attr("data-animate", value.images.fixed_height.url);
+            image.attr("data-state", "still");
+            $(".gifs").append(image);
+            
+        })
+        $("img").on("click", animateGif);
+    });
+
+    
+}
+
+function animateGif(){
+    console.log("click")
+    var state = $(this).attr("data-state");
+    if(state === "still"){
+        $(this).attr("src", $(this).attr("data-animate"));
+        $(this).attr("data-state", "animate");
+    } else {
+        $(this).attr("src", $(this).attr("data-still"));
+        $(this).attr("data-state", "still");
+    }
+
+}
+
+$(document).ready(function() {
+
+    $("button").on("click", getGifs);
+});
