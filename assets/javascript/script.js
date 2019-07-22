@@ -22,6 +22,7 @@ topics.forEach(function(value) {
 });
 
 function getGifs(){
+    $("img").off("click", animateGif);
     var search = $(this).text();
     var URL = queryURL + "&q=" + search;
     console.log(URL);
