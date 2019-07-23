@@ -34,11 +34,15 @@ function getGifs(){
         var items = response.data;
         console.log(items);
         items.forEach(function(value){
+            var div = $("<div>");
+            var rate = $("<p id='rating'>Rating: " + value.rating.toUpperCase() + "</p>");
+            console.log(rate)
             var image = $("<img class='gif' src='" + value.images.fixed_height_still.url + "'>");
             image.attr("data-still", value.images.fixed_height_still.url);
             image.attr("data-animate", value.images.fixed_height.url);
             image.attr("data-state", "still");
-            $(".gifs").prepend(image);
+            div.prepend(rate, image);
+            $(".gifs").prepend(div);
             
         })
         $("img").on("click", animateGif);
