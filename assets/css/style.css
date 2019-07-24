@@ -1,12 +1,26 @@
 .buttons {
-    max-width: 80%;
+    max-width: 70%;
     background-color: #E6E2EB;
+    margin-bottom: 10px;
 }
 
+.card {
+    background-color: #E6E2EB;
+    margin-bottom: 10px;
+}
+
+hr {
+    color: rgb(146, 146, 146);
+}
 .button-container {
     height: 100px;
+    
 }
 
 #rating {
     text-align: center;
+}
+
+.jumbotron{
+    max-width: 90%;
 }

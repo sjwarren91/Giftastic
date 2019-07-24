@@ -14,16 +14,27 @@
 </head>
 
 <body>
-    <div class="jumbotron jumbotron-fluid mb-0">
+    <div class="jumbotron mx-auto mb-1">
         <div class="container d-flex flex-column align-items-center">
             <h1 class="display-4">Welcome to GIFtastic!</h1>
             <p class="lead">Diplay your favourite GIFs with the click of a button</p>
         </div>
+        <hr class="my-4">
+        <div class="container d-flex justify-content-center">
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="inputGIF" class="sr-only"></label>
+                <input id="gifText" type="text" class="form-control" placeholder="Gif">   
+            </div>
+            <button type="submit" id="newGif" class="btn btn-info ml-2">Add New Gif</button>
+        </form>
+        </div>
+        
     </div>
 
     <div class="buttons container d-flex justify-content-center">
         <div class="row">
-            <div class="button-container col-md12 m-auto justify-content-center d-flex align-items-center">
+            <div class="button-container col-md12 m-auto justify-content-center d-flex align-items-center flex-wrap">
                 
             </div>
         </div>
@@ -31,7 +42,7 @@
 
     <div class="container d-flex justify-content-center">
         <div class="row">
-            <div class="gifs col-md12 m-auto justify-content-between d-flex align-items-center flex-wrap">
+            <div class="gifs col-md12 m-auto justify-content-around d-flex align-items-center flex-wrap">
                 
             </div>
         </div>
