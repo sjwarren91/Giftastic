@@ -1,14 +1,14 @@
 var topics = [
-    "Red Panda",
-    "German Shepherd",
-    "Ferret",
-    "Macaw",
-    "Otter",
-    "Meerkat",
-    "Wolf",
-    "Eagle",
-    "Dolphin",
-    "Octopus"
+    "Naruto",
+    "One Piece",
+    "Full Metal Alchemist",
+    "Code Geass",
+    "Dragon Ball Z",
+    "Attack On Titan",
+    "Tokyo Ghoul",
+    "Black Clover",
+    "Cowboy Bebop",
+    "Psycho Pass"
 ];
 
 var queryURL = "http://api.giphy.com/v1/gifs/search?api_key=cowOAeiGWvGdEO89h5WnD0cWel5LBdO2&limit=10"
