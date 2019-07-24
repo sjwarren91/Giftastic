@@ -11,7 +11,7 @@ var topics = [
     "Psycho Pass"
 ];
 
-var queryURL = "http://api.giphy.com/v1/gifs/search?api_key=cowOAeiGWvGdEO89h5WnD0cWel5LBdO2&limit=10"
+var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=cowOAeiGWvGdEO89h5WnD0cWel5LBdO2&limit=10"
 
 topics.forEach(function(value) {
     var button = $("<button>");
