@@ -1,6 +1,6 @@
 var topics = [
     "Naruto",
-    "One Piece",
+    "Monkey D. Luffy",
     "Full Metal Alchemist",
     "Code Geass",
     "Dragon Ball Z",
