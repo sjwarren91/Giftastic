@@ -17,6 +17,7 @@ topics.forEach(function(value) {
     var button = $("<button>");
     button.attr("type", "button");
     button.addClass("btn btn-primary m-1");
+    button.attr("data-offset", 0)
     button.text(value);
     $(".button-container").append(button);
 });
@@ -24,7 +25,9 @@ topics.forEach(function(value) {
 function getGifs(){
     $("img").off("click", animateGif);
     var search = $(this).text();
-    var URL = queryURL + "&q=" + search;
+    var offset = $(this).attr("data-offset");
+    var URL = queryURL + "&q=" + search + "&offset=" + offset;
+    $(this).attr("data-offset", parseInt(offset) + 10);
     console.log(URL);
     $.ajax({
         url: URL,
