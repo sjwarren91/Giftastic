@@ -6,7 +6,7 @@ var topics = [
     "Dragon Ball Z",
     "Attack On Titan",
     "Tokyo Ghoul",
-    "Black Clover",
+    "Ghost in the Shell",
     "Cowboy Bebop",
     "Psycho Pass"
 ];
