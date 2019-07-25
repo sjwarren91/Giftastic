@@ -23,3 +23,20 @@ hr {
 .jumbotron{
     max-width: 90%;
 }
+
+.heading {
+    width: 100%;
+    text-align: center;
+}
+
+.gifs {
+    width: 70%;
+}
+
+.favs {
+    width: 30%;
+}
+
+.row {
+    width: 100%
+}

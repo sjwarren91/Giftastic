@@ -45,7 +45,7 @@ function getGifs(){
             image.attr("data-animate", value.images.fixed_height.url);
             image.attr("data-state", "still");
             div.prepend(rate, image);
-            $(".gifs").prepend(div);
+            $(".gifs").append(div);
             
         })
         $("img").on("click", animateGif);
