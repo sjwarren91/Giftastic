@@ -73,6 +73,7 @@ function newGifButton(){
     var button = $("<button>");
     button.attr("type", "button");
     button.addClass("btn btn-primary m-1");
+    button.attr("data-offset", 0)
     button.text(newButton);
     button.on("click", getGifs);
     $(".button-container").append(button);
