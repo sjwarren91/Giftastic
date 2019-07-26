@@ -5,61 +5,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Giftastic</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+        integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+        crossorigin="anonymous"></script>
+    <title>GIFtastic</title>
 </head>
 
 <body>
-    <div class="jumbotron mx-auto mb-1">
-        <div class="container d-flex flex-column align-items-center">
-            <h1 class="display-4">Welcome to GIFtastic!</h1>
-            <p class="lead">Diplay your favourite GIFs with the click of a button</p>
-        </div>
-        <hr class="my-4">
-        <div class="container d-flex justify-content-center">
-        <form class="form-inline">
-            <div class="form-group">
-                <label for="inputGIF" class="sr-only"></label>
-                <input id="gifText" type="text" class="form-control" placeholder="Gif">   
-            </div>
-            <button type="submit" id="newGif" class="btn btn-info ml-2">Add New Gif</button>
-        </form>
-        </div>
-        
-    </div>
+    <div class="wrap">
 
-    <div class="buttons container d-flex justify-content-center">
-        <div class="row">
-            <div class="button-container col-md12 m-auto justify-content-center d-flex align-items-center flex-wrap">
-                
+        <div class="sidebar">
+            <div class="fav-header">
+                <h4>Favourite Gifs</h4>
+                <hr class="my-4">
             </div>
         </div>
-    </div>
 
-    <div class="container d-flex justify-content-center">
-        <div class="row">
-            
-            <div class="gifs col-md9 justify-content-around d-flex flex-wrap">
-                <div class="heading">
-                   <h1>Gifs Here</h1> 
+        <div class="main">
+
+            <nav class="navbar navbar-light bg-light justify-content-between">
+
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Favourites</span>
+                    </button>
+
+                    <span>
+                        <h2 class="heading"><img id="giphy" src="./assets/images/giphy-icon.svg"
+                                style="width: 40px;">Welcome to GIFtastic!</h2>
+                    </span>
+
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="search" placeholder="New GIF" aria-label="Search">
+                        <button id="newGif" class="btn my-2 my-sm-0" type="submit">Get GIF</button>
+                    </form>
+                </div>
+            </nav>
+
+            <div class="buttons container d-flex justify-content-center">
+                <div class="row">
+                    <div
+                        class="button-container col-md12 m-auto justify-content-center d-flex align-items-center flex-wrap">
+
+                    </div>
                 </div>
             </div>
-            <div class="favs col-md3 justify-content-around d-flex flex-wrap">
-                
-                <div class="heading">
-                    <h1>Favs Here</h1>
+
+            <div class="container d-flex justify-content-center">
+                <div class="row">
+                    <div class="gifs col-md12 m-auto justify-content-around d-flex align-items-center flex-wrap">
+
+                    </div>
                 </div>
-                
             </div>
+
         </div>
+
     </div>
 
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
     <script src="./assets/javascript/script.js"></script>
+
 </body>
 
 </html>

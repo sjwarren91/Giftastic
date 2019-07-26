@@ -1,17 +1,19 @@
 .buttons {
-    max-width: 70%;
-    background-color: #E6E2EB;
+    background-color: #F8F9FA;
     margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .card {
-    background-color: #E6E2EB;
+    background-color: #F8F9FA;
     margin-bottom: 10px;
 }
 
 hr {
     color: rgb(146, 146, 146);
 }
+
 .button-container {
     padding: 10px;
 }
@@ -29,14 +31,87 @@ hr {
     text-align: center;
 }
 
-.gifs {
-    width: 70%;
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
-.favs {
-    width: 30%;
+.wrap {
+    display: flex;
+    width: 100%;
 }
 
-.row {
-    width: 100%
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    margin-bottom: 20px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+
+}
+
+#sidebarCollapse {
+    background-color: #7659FF;
+    border: rgb(96, 65, 252)
+}
+
+.sidebar {
+    width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: #7659FF;
+    color: #fff;
+    transition: all;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.main {
+    width: calc(100% - 300px);
+    padding: 40px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.heading {
+    display: inline-block;
+    margin: 0;
+}
+
+.main.active {
+    width: 100%;
+}
+
+.sidebar.active {
+    margin-left: -300px;
+}
+
+.fav-header {
+    text-align: center;
+    margin: 10px 10px 5px 10px;
+}
+
+#giphy {
+    position: relative;
+    top: -5px;
+    margin-right: 10px;
+}
+
+#newGif {
+    color: #7659FF;
+    border-color: #7659FF;
+}
+
+#newGif:hover {
+    color: #fff;
+    background-color: #7659FF
+}
+
+hr {
+    border-color: #fff;
 }

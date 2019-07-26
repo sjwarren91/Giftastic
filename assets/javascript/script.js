@@ -86,4 +86,9 @@ $(document).ready(function() {
         
     });
     $(".btn-primary").on("click", getGifs);
+
+    $('#sidebarCollapse').on('click', function () {
+        $('.sidebar').toggleClass('active');
+        $('.main').toggleClass('active');
+    });
 });
