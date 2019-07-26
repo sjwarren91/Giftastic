@@ -8,6 +8,8 @@
 .card {
     background-color: #F8F9FA;
     margin-bottom: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
 }
 
 hr {
@@ -42,7 +44,7 @@ hr {
 }
 
 .navbar {
-    padding: 15px 10px;
+    padding: 0px 10px;
     background: #fff;
     margin-bottom: 20px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
@@ -50,8 +52,9 @@ hr {
 }
 
 #sidebarCollapse {
-    background-color: #7659FF;
-    border: rgb(96, 65, 252)
+    background-color: #6F50FF;
+    border: rgb(63, 34, 209);
+    margin: 15px 0;
 }
 
 .sidebar {
@@ -61,7 +64,7 @@ hr {
     left: 0;
     height: 100vh;
     z-index: 999;
-    background: #7659FF;
+    background: #6F50FF;
     color: #fff;
     transition: all;
     border-top-right-radius: 20px;
@@ -81,6 +84,7 @@ hr {
 .heading {
     display: inline-block;
     margin: 0;
+    margin: 15px 0;
 }
 
 .main.active {
@@ -103,15 +107,54 @@ hr {
 }
 
 #newGif {
-    color: #7659FF;
-    border-color: #7659FF;
+    color: #FF7095;
+    border-color: #FF7095;
 }
 
 #newGif:hover {
     color: #fff;
-    background-color: #7659FF
+    background-color: #FF7095
 }
 
 hr {
     border-color: #fff;
+}
+
+.btn-primary {
+    background-color: #FF7095;
+    border-color: #FF7095;
+    font-size: 15px;
+}
+
+.btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem #FF7095;
+}
+
+.btn-primary:hover{
+    background-color: rgb(192, 84, 113);
+    border-color: rgb(192, 84, 113);
+}
+
+.fav-button {
+    font-size: 15px;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+    border: 2px solid #7659FF;
+    border-radius: 5px;
+    background: #fff
+}
+
+.fav-button:hover {
+    background: #7659FF;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+p {
+    margin-bottom: 0.5rem;
+}
+
+#form {
+    margin: 10px 0;
 }

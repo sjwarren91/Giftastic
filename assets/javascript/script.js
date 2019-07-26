@@ -39,12 +39,14 @@ function getGifs(){
         items.forEach(function(value){
             var div = $("<div class='card'>");
             var rate = $("<p id='rating'>Rating: " + value.rating.toUpperCase() + "</p>");
+            var favButton = $("<button class='fav-button'>Favourite</button>");
             console.log(rate)
             var image = $("<img class='gif' src='" + value.images.fixed_height_still.url + "'>");
             image.attr("data-still", value.images.fixed_height_still.url);
             image.attr("data-animate", value.images.fixed_height.url);
             image.attr("data-state", "still");
-            div.prepend(rate, image);
+            
+            div.prepend(rate, favButton, image);
             $(".gifs").append(div);
             
         })
