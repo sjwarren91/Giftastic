@@ -182,6 +182,7 @@ $(document).ready(function() {
     });
 
     favArray = JSON.parse(localStorage.getItem("favs"));
+    
     if(favArray){
        favGifs(); 
     }
