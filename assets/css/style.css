@@ -208,6 +208,21 @@ p {
 
     .gif-container {
         height: 300px;
-        overflow-y: scroll;
+        flex-direction: column;
+        align-items: center;
+        overflow: auto;
+    }
+
+    .btn-primary {
+        height: 30px;
+        line-height: 1;
+    }
+
+    .card {
+        max-width: 290px;
+    }
+
+    .one {
+        max-height: 300px;
     }
 }
