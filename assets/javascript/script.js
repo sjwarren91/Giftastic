@@ -19,7 +19,7 @@ var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=cowOAeiGWvGdEO89h5W
 var favArray = [];
 
 //adding buttons to the DOM for each of the initial topics
-topics.forEach(function(value) {
+topics.forEach(function (value) {
     var button = $("<button>");
     button.attr("type", "button");
     button.addClass("btn btn-primary m-1");
@@ -40,12 +40,12 @@ function getGifs() {
     $(this).attr("data-offset", parseInt(offset) + 10);
     //our ajax query along with our function to print the gifs to the DOM
     $.ajax({
-        url: URL,
-        method: "GET"
-    })
-        .then(function(response) {
+            url: URL,
+            method: "GET"
+        })
+        .then(function (response) {
             var items = response.data;
-            items.forEach(function(value) {
+            items.forEach(function (value) {
                 //create new elements for the gifs
                 var div = $("<div class='card'>");
                 var rate = $("<p id='rating'>Rating: " + value.rating.toUpperCase() + "</p>");
@@ -61,7 +61,7 @@ function getGifs() {
             });
         })
         //once the ajax query is done add click events to the image and to the favourite button
-        .done(function() {
+        .done(function () {
             $("img").on("click", animateGif);
             $(".fav-button").off("click", favourite);
             $(".fav-button").on("click", favourite);
@@ -111,14 +111,15 @@ function favourite() {
         animate: animate,
         rating: rating
     };
-
+    console.log(imgObj)
+    console.log(favArray)
     //add them to the global favourite gifs array
     favArray.push(imgObj);
     //set this array as data in local storage
     localStorage.setItem("favs", JSON.stringify(favArray));
     //call function to print fav gifs to sidebar
     favGifs();
-    
+
 }
 
 //similar function to printing the gifs from the API to the screen
@@ -127,7 +128,7 @@ function favourite() {
 function favGifs() {
     $(".favs").empty();
     $("img").off("click", animateGif);
-    favArray.forEach(function(value) {
+    favArray.forEach(function (value) {
         var div = $("<div class='card'>");
         var rate = $("<p id='rating' style='color: black;'>" + value.rating + "</p>");
         var removeButton = $("<button class='remove-button'>Remove</button>");
@@ -153,13 +154,13 @@ function remove() {
         .siblings("img")
         .attr("data-still");
     //compare it with the gif urls in the fav gif array
-    for(let i = 0; i < favArray.length; i++){
+    for (let i = 0; i < favArray.length; i++) {
         //remove it
-        if(favArray[i].still === id){
-            favArray.splice(i,1)
-        }   
+        if (favArray[i].still === id) {
+            favArray.splice(i, 1)
+        }
     };
-    
+
     //remove from the DOM
     $(this)
         .parent()
@@ -168,23 +169,24 @@ function remove() {
 }
 
 //initialize stuff
-$(document).ready(function() {
-    $("#newGif").on("click", function(event) {
+$(document).ready(function () {
+    $("#newGif").on("click", function (event) {
         event.preventDefault();
         newGifButton();
     });
 
     $(".btn-primary").on("click", getGifs);
 
-    $("#sidebarCollapse").on("click", function() {
+    $("#sidebarCollapse").on("click", function () {
         $(".sidebar").toggleClass("active");
         $(".main").toggleClass("active");
     });
 
-    favArray = JSON.parse(localStorage.getItem("favs"));
-    
-    if(favArray){
-       favGifs(); 
+    arrayTest = JSON.parse(localStorage.getItem("favs"));
+
+    if (arrayTest) {
+        favArray = JSON.parse(localStorage.getItem("favs"));
+        favGifs();
     }
-    
+
 });
