@@ -160,13 +160,14 @@ p {
     margin: 10px 0;
 }
 
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 992px) {
     .sidebar {
-        margin: -300px;
+        margin-left: -300px;
     }
 
     .sidebar.active {
-        margin: 300px;
+        margin-left: 0px;
     }
 
     .main {
@@ -177,7 +178,36 @@ p {
         width: calc(100% - 300px);
     }
 
-    .navbar {
-        justify-content: center;
+    .nav-header {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px){
+    #sidebarCollapse {
+        visibility: hidden;
+        height: 0;
+    }
+
+    .wrap {
+        flex-direction: column-reverse;
+    }
+
+    .sidebar {
+        margin-left: 0;
+        height: 300px;
+        position: static;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .main {
+        position: static;
+        min-height: 300px;
+    }
+
+    .gif-container {
+        height: 300px;
+        overflow-y: scroll;
     }
 }
