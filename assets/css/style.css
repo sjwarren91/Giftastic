@@ -137,7 +137,8 @@ hr {
     border-color: rgb(192, 84, 113);
 }
 
-.fav-button {
+.fav-button,
+.remove-button {
     font-size: 15px;
     width: 50%;
     margin: 0 auto;
@@ -147,8 +148,18 @@ hr {
     background: #fff
 }
 
+.remove-button {
+    border: 2px solid #FF7095;
+}
+
 .fav-button:hover {
     background: #7659FF;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.remove-button:hover {
+    background: #FF7095;
     color: #fff;
     transition: all 0.3s;
 }
@@ -160,7 +171,6 @@ p {
 #form {
     margin: 10px 0;
 }
-
 
 @media screen and (max-width: 992px) {
     .sidebar {
