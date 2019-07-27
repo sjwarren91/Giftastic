@@ -66,9 +66,10 @@ hr {
     z-index: 999;
     background: #6F50FF;
     color: #fff;
-    transition: all;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    transition: all 0.3s;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 5px 3px 3px rgba(5, 5, 5, 0.1);
 }
 
 .main {
@@ -157,4 +158,26 @@ p {
 
 #form {
     margin: 10px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        margin: -300px;
+    }
+
+    .sidebar.active {
+        margin: 300px;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .main.active {
+        width: calc(100% - 300px);
+    }
+
+    .navbar {
+        justify-content: center;
+    }
 }

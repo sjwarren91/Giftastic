@@ -51,6 +51,8 @@ function getGifs(){
             
         })
         $("img").on("click", animateGif);
+        $(".fav-button").off("click", favourite);
+        $(".fav-button").on("click", favourite);
     });
 
     
@@ -79,6 +81,12 @@ function newGifButton(){
     button.text(newButton);
     button.on("click", getGifs);
     $(".button-container").append(button);
+}
+
+function favourite(){
+    console.log($(this))
+    var fave = $(this).parent().clone();
+    $(".sidebar").append(fave);
 }
 
 $(document).ready(function() {
