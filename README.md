@@ -7,6 +7,6 @@ If you find a Gif you really like, save it to your favourites list. This list is
 2. Javascript
 3. CSS3
 4. HTML5
-5. Jquery
-6. AJAX library
+5. jQuery
+6. AJAX
 7. GIPHY API
